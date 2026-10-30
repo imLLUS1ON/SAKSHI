@@ -1,0 +1,24 @@
+# Datasets and derived data are large and licensed separately; never commit them.
+# Anchored to the repository root so the source package src/sakshi/data/ is not ignored.
+/data/
+/runs/
+/build/
+/dist/
+# Blind WP5 sheets contain source post text and are local reviewer artifacts.
+/reports/generation/*_sheet.csv
+
+# Presenter-only material is kept outside this public repository.
+/docs/SAKSHI_FIELD_MANUAL.md
+/docs/SAKSHI_EVALUATION_SCRIPT.md
+/docs/demo/
+/output/pdf/SAKSHI_Field_Manual.pdf
+/output/pdf/SAKSHI_Evaluation_Script.pdf
+/scripts/build_field_manual_pdf.py
+/scripts/build_evaluation_script_pdf.py
+
+.venv/
+__pycache__/
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.DS_Store
