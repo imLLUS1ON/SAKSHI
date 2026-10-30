@@ -94,6 +94,17 @@ Research methods and acceptance criteria are in the [design specification](SAKSH
 
 </details>
 
+## For users who cannot fine-tune (Mac, no GPU, or no [ml,xai] install)
+
+Fine-tuning the BERT+CLIP classifier requires a GPU and the `[ml,xai]` package extras. If you only want to use the model (not retrain it), get the pre-trained weights from the maintainer or download a frozen checkpoint from the repository releases. Then skip `sakshi-model train` and go straight to:
+
+```bash
+python -m pip install -e ".[dev,app]"  # no [ml,xai] needed for inference
+sakshi-app --port 8501
+```
+
+The fine-tuned `FusionClassifier` weights and any exported GGUF/ONNX artifacts are shared separately — not in the Git repo. Contact the maintainer for the latest checkpoint download.
+
 ## Project references
 
 | Open | For |
